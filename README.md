@@ -139,17 +139,25 @@ We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
   in order to get the result of M5 and $\alpha$ coefficient is 0.08.
 
 * rebuttal
-This is the extra experiment we did during review, the main idea is to indicate the significance of improvement between our motif-based method and two baseline wich is BPR and MPR. We select the 80% of nodes in the DBLP network using uniform distribution, and construct the subgraph. Then we run our experiments and evaluate to compute the ndcg value. Repeat this procedure for 30 times and the same is for the baseline such as BPR. So we can get the variable samples to compute the significance between them using t-test.
-1. motif_construct_direct_random.py : construct the subgraph and then compute the motif matrix.
-2. pagerank_motif_random.py: can compute the motif-pagerank result, if we want to compute the motif of 'M7' and $\alpha$ value of 0.2, then we can modify the row:
-a, entry_unique = construct_motif('data/citation_network.txt', 1, 'M7', 0.2)
-this code will run the results for all 30 subgraphs.
-and if we want to compute the BPR:
-a, entry_unique = construct_motif('data/citation_network.txt', 0, type, alpha_value)
-3. send the results to result_read_random.py and ndcg_DBLP_rebuttal.py, we can get the 30 ndcg value for each methods.
-4. using the above results and send it into t_test.py can get the final results which is the significance measurement.
+  This is the extra experiment we did during review, the main idea is to indicate the significance of improvement between our motif-based method and two baseline wich is BPR and MPR. We select the 80% of nodes in the DBLP network using uniform distribution, and construct the subgraph. Then we run our experiments and evaluate to compute the ndcg value. Repeat this procedure for 30 times and the same is for the baseline such as BPR. So we can get the variable samples to compute the significance between them using t-test.
 
+  1. motif_construct_direct_random.py : construct the subgraph and then compute the motif matrix.
+  2. pagerank_motif_random.py: can compute the motif-pagerank result, if we want to compute the motif of 'M7' and $\alpha$ value of 0.2, then we can modify the row:
 
+  ```python
+  a, entry_unique = construct_motif('data/citation_network.txt', 1, 'M7', 0.2)
+  ```
+
+  this code will run the results for all 30 subgraphs. and if we want to compute the BPR:
+
+  ```python
+  a, entry_unique = construct_motif('data/citation_network.txt', 0, type, alpha_value)
+  ```
+
+  any type and alpha_value is ok.
+
+  3. send the results to result_read_random.py and ndcg_DBLP_rebuttal.py, we can get the 30 ndcg value for each methods.
+  4. using the above results and send it into t_test.py can get the final results which is the significance measurement.
 ### Baselines
 
 DBLP:
