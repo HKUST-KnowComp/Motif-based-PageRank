@@ -4,6 +4,12 @@ This is the releasing code for our AAAI 2018 paper: "Ranking Users in Social Net
 
 The following is an instruction to reproduce our experiments.
 
+### Settings and Dependencies.
+* CentOS
+* Python 2.7
+* Numpy
+* Networkx
+
 ### Datasets
 
 We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
