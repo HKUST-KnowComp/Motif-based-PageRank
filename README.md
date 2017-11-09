@@ -1,6 +1,10 @@
-# higher-order-pagerank
+# Higher-order-pagerank
+### Introduction
+This is the releasing code for our AAAI 2018 paper: "Ranking Users in Social Networks with Higher-Order Structures".
 
-### datasets
+The following is an instruction to reproduce our experiments.
+
+### Datasets
 
 We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
 * DBLP:
@@ -22,7 +26,7 @@ We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
   3. **average_indegree_ciao.txt** recore the id and the indegree of this id in the network. For example, '256;95' means person with id of 256 has degree of 95.
 
 
-### experiment
+### Motif-based PageRank
 
 * DBLP:
   For example, we want to get the result where the motif we use is M7 and the $\alpha$ coefficient is 0.2, which is best in Top50
@@ -96,7 +100,7 @@ We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
 
      The txt_name we need to specify, such as **'result_Ciao_M5_alpha0.08.txt'**In this result document, each row is person's id, pagerank_value.
 
-### evaluate
+### Evaluation
 
 * DBLP
   once we get the result document from experiment, we can use the code of **ndcg_DBLP.py** in evaluate/DBLP file. 
@@ -129,7 +133,7 @@ We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
   in order to get the result of M5 and $\alpha$ coefficient is 0.08.
 
 
-### baseline
+### Baselines
 
 DBLP:
 1. IND：we need the data of author_citation_domain.txt in data/DBLP in which, each row is author's id, name and in-degree. And run the code of baseline/DBLP/ndcg_IND.py in which make sure that 
