@@ -1,4 +1,4 @@
-# Higher-order-pagerank
+# Motif-based PageRank
 ### Introduction
 This is the releasing code for our AAAI 2018 paper: "Ranking Users in Social Networks with Higher-Order Structures".
 
