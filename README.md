@@ -12,7 +12,7 @@ The following is an instruction to reproduce our experiments.
 
 ### Datasets
 
-We use three datasets for experiments. They are **DBLP, Epinion, Ciao**
+We use three datasets for experiments. They are **DBLP, Epinion, Ciao**. The **DBLP** is provided by Arminer and we use the version V9 from https://aminer.org/citation, and **Epinion, Ciao** are from https://www.cse.msu.edu/~tangjili/trust.html. 
 * DBLP:
   1. **author_name_id.txt** is the document which record the name of author and corresponding id which represent the node in the network.such as 'Jiawei Han;1' means the id for Jiawei Han is 1.
   2. **citation_network.txt** is the document which describe the relation network for all authors in forms of id. For example, '423;6151' means that the author with id of 423 cite the author with id of 6151.
