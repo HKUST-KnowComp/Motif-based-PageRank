@@ -331,7 +331,15 @@ def construct_motif(txt_name, type1, type2):
     result_E = motif_times(adjacency_matrix, 1, type2)
     # result_E is the motif-based-mat which is computed by formula
     result_mm = result_D.tolil() - result_E.tolil()
-    print(np.sqrt(np.mean(np.square(result_mm))))
+    #print(np.sqrt(np.mean(np.square(result_mm))))
+    rmse = 0
+    for mmmm in range(maxnum):
+        index_temp = (result_E[mmmm] != 0)
+        temp_rmse = result_mm[mmmm][index_temp]
+        if temp_rmse.shape[1] == 0:
+            continue
+        rmse += np.sqrt(np.mean(np.square(temp_rmse)))
+    print(rmse * 1.0 / maxnum)
 
 
 if __name__ == '__main__':
