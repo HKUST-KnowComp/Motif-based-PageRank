@@ -1,6 +1,17 @@
 # Motif-based PageRank
 ### Introduction
-This is the releasing code for our AAAI 2018 paper: "Ranking Users in Social Networks with Higher-Order Structures".
+This is the releasing code for our AAAI 2018 paper: ["Ranking Users in Social Networks with Higher-Order Structures"] (http://www.cse.ust.hk/~hzhaoaf/data/aaai2018-paper.pdf). 
+
+Readers are welcomed to fork this repository to reproduce the experiments and follow our work. Please kindly cite our paper
+    
+    @inproceedings{zhao2018ranking,
+    title={Ranking Users in Social Networks with Higher-Order Structures},
+    author={Zhao, Huan and Xu, Xiaogang and Song, Yangqiu and Lee, Dik Lun and Chen, Zhao and Gao, Han},
+    booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
+    year={2018}
+    }
+
+
 
 The following is an instruction to reproduce our experiments.
 
